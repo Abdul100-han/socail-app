@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-// import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 // import Navbar from "@/components/Navbar";
 // import Sidebar from "@/components/Sidebar";
 // import { Toaster } from "react-hot-toast";
@@ -32,12 +32,12 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          {/* <ThemeProvider
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
-          > */}
+          >
             <div className="min-h-screen">
               {/* <Navbar /> */}
 
@@ -54,7 +54,7 @@ export default function RootLayout({
               </main>
             </div>
             {/* <Toaster /> */}
-          {/* </ThemeProvider> */}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
